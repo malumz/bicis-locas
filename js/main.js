@@ -1,7 +1,7 @@
 //VALIDACION DE NOMBRE
 
 function validateNombre(evento){
-    
+     /*Los campos nombre y apellido sólo deben permitir caracteres de la A-Z*/
         var nombre = document.getElementById("name").value;
         
         var nombreArray = nombre.split("");
@@ -36,7 +36,7 @@ function validateName(event){
 
 //VALIDACION DE APELLIDO
 function validateApellido(event){
-    
+      /*Los campos nombre y apellido sólo deben permitir caracteres de la A-Z*/
         var apellido = document.getElementById("lastname").value;
         
         var apellidoArray = apellido.split("");
@@ -67,16 +67,8 @@ function validateLastname(event){
             event.preventDefault();
         }
 }
-
-
-
-
-    
 //VALIDACION DE EMAIL.
-    
-     
-
-function validateEmail(evento){
+  function validateEmail(evento){
     
   var email = document.getElementById("email").value;
   var correo = /\w+@\w+\.+[a-z]/;
@@ -89,10 +81,10 @@ function validateEmail(evento){
     }
 }
 
-
-
-
 //VALIDACION DE CONTRASEÑA
+
+//El campo password debe tener al menos 6 caracteres
+//El campo password no puede ser igual a "password" ó "123456" ó "098754"  
     
 document.getElementById("input-password").setAttribute("minlength","6");
 
@@ -105,7 +97,7 @@ document.getElementById("input-password").setAttribute("minlength","6");
       }
   }
 
-//VALIDACIONN DE SELECTOR
+//VALIDACIONN DE SELECTOR  //ENVIAR TIPO DE BICICLETA SOLO AL PRESIONAR "REGISTRAR"
 
 function validateSelector(evento){
     var selector= document.querySelector("select").value;
